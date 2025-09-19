@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const ContactSection = () => {
-  return (
-    <section id="contact" className="py-16 bg-muted/50">
+  return <section id="contact" className="py-16 bg-muted/50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-foreground">
@@ -26,7 +24,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium text-card-foreground">Адрес</p>
-                  <p className="text-muted-foreground">ул. Спортивная, 15, корп. 2</p>
+                  <p className="text-muted-foreground">Калуга, Ул. Кибальчича, д.32</p>
                 </div>
               </div>
               
@@ -36,7 +34,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium text-card-foreground">Телефон</p>
-                  <p className="text-muted-foreground">+7 (123) 456-78-90</p>
+                  <p className="text-muted-foreground">+7 910 529 82 82</p>
                 </div>
               </div>
               
@@ -56,7 +54,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium text-card-foreground">Email</p>
-                  <p className="text-muted-foreground">info@sk-pobeda.ru</p>
+                  <p className="text-muted-foreground">pobedanakube@gmail.com</p>
                 </div>
               </div>
             </CardContent>
@@ -73,18 +71,11 @@ const ContactSection = () => {
               </p>
               
               <div className="space-y-3">
-                <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                  size="lg"
-                >
+                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" size="lg">
                   Позвонить сейчас
                 </Button>
                 
-                <Button 
-                  variant="outline" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  size="lg"
-                >
+                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" size="lg">
                   Написать в WhatsApp
                 </Button>
               </div>
@@ -98,8 +89,6 @@ const ContactSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
