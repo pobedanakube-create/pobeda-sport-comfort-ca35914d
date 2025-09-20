@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
+import BookingForm from "@/components/BookingForm";
 import Features from "@/components/Features";
 import ContactSection from "@/components/ContactSection";
 
@@ -17,6 +18,7 @@ const Index = () => {
         <ServicesSection />
         <Gallery />
         <Testimonials />
+        <BookingForm />
         <Features />
         <ContactSection />
       </main>
