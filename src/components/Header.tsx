@@ -13,10 +13,9 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#about-club" className="text-foreground hover:text-primary transition-colors">О клубе</a>
+            <a href="#about" className="text-foreground hover:text-primary transition-colors">О клубе</a>
             <a href="#services" className="text-foreground hover:text-primary transition-colors">Услуги</a>
-            <a href="#trainers" className="text-foreground hover:text-primary transition-colors">Тренеры</a>
-            <a href="#prices" className="text-foreground hover:text-primary transition-colors">Цены</a>
+            <a href="#gallery" className="text-foreground hover:text-primary transition-colors">Галерея</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Контакты</a>
           </nav>
           
