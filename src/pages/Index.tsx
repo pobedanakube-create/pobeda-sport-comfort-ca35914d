@@ -25,20 +25,118 @@ const Index = () => {
         <ContactSection />
       </main>
       
-      <footer className="bg-secondary text-secondary-foreground py-8">
-        <div className="container mx-auto px-6 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-6 h-6 bg-gradient-accent rounded-full flex items-center justify-center">
-              <span className="text-fitness-secondary font-bold text-xs">П</span>
+      <footer className="bg-secondary text-secondary-foreground py-12 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {/* Логотип и описание */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                <div className="w-8 h-8 bg-gradient-accent rounded-full flex items-center justify-center">
+                  <span className="text-fitness-secondary font-bold text-sm">П</span>
+                </div>
+                <span className="text-xl font-bold text-secondary-foreground">СК Победа</span>
+              </div>
+              <p className="text-secondary-foreground/70 text-sm leading-relaxed">
+                Ваш спортивный клуб рядом с домом — здоровый образ жизни стал ближе!
+              </p>
             </div>
-            <span className="text-lg font-semibold">СК Победа</span>
+
+            {/* Полезные ссылки */}
+            <div className="text-center">
+              <h4 className="font-semibold text-secondary-foreground mb-4">Полезные ссылки</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a 
+                    href="#about" 
+                    className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4"
+                  >
+                    О нас
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#services" 
+                    className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4"
+                  >
+                    Услуги
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#contact" 
+                    className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4"
+                  >
+                    Контакты
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="/privacy" 
+                    className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4"
+                  >
+                    Политика конфиденциальности
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Социальные сети */}
+            <div className="text-center md:text-right">
+              <h4 className="font-semibold text-secondary-foreground mb-4">Мы в соцсетях</h4>
+              <div className="flex justify-center md:justify-end space-x-4 mb-4">
+                <a 
+                  href="https://vk.com/pobeda_sport" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group"
+                >
+                  <span className="text-secondary-foreground group-hover:text-white text-sm font-bold">ВК</span>
+                </a>
+                <a 
+                  href="https://instagram.com/pobeda_sport" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group"
+                >
+                  <span className="text-secondary-foreground group-hover:text-white text-sm font-bold">IG</span>
+                </a>
+                <a 
+                  href="https://t.me/pobeda_sport" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group"
+                >
+                  <span className="text-secondary-foreground group-hover:text-white text-sm font-bold">TG</span>
+                </a>
+              </div>
+              <p className="text-secondary-foreground/70 text-xs">
+                Следите за новостями и акциями
+              </p>
+            </div>
           </div>
-          <p className="text-secondary-foreground/80">
-            Ваш спортивный клуб рядом с домом — здоровый образ жизни стал ближе!
-          </p>
-          <p className="text-sm text-secondary-foreground/60 mt-4">
-            © 2024 СК Победа. Все права защищены.
-          </p>
+
+          {/* Разделительная линия */}
+          <div className="border-t border-secondary-foreground/20 pt-6">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-sm text-secondary-foreground/60 text-center md:text-left">
+                © 2025 СК Победа. Все права защищены.
+              </p>
+              <div className="flex flex-wrap justify-center md:justify-end gap-4 text-xs">
+                <a 
+                  href="/terms" 
+                  className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4"
+                >
+                  Пользовательское соглашение
+                </a>
+                <a 
+                  href="/privacy" 
+                  className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4"
+                >
+                  Политика конфиденциальности
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
