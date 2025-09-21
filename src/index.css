@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance optimization layer */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Optimize animations for reduced motion users */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
 /* СК Победа Design System - Sports club theme with energetic colors */
 
 @layer base {
@@ -117,30 +144,41 @@
 
   body {
     @apply bg-background text-foreground font-sans;
+    /* Performance optimizations */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 
 @layer components {
   .hero-banner {
     @apply relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat;
+    /* Optimized for mobile performance */
+    background-attachment: local;
+    will-change: transform;
     background-image: linear-gradient(135deg, hsl(var(--fitness-overlay)), hsl(var(--fitness-overlay))), url('');
   }
   
   .hero-content {
-    @apply text-center text-white z-10 max-w-4xl mx-auto px-6;
+    @apply text-center text-white z-10 max-w-4xl mx-auto px-4 sm:px-6;
+    /* Performance optimization */
+    will-change: transform;
   }
   
   .hero-title {
-    @apply text-5xl md:text-7xl font-bold mb-6 leading-tight;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight;
     background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: slideInUp 1s ease-out;
+    /* Performance optimization */
+    will-change: transform;
   }
   
   .hero-subtitle {
-    @apply text-xl md:text-2xl mb-8 text-white/90 font-medium leading-relaxed;
+    @apply text-lg sm:text-xl md:text-2xl mb-8 text-white/90 font-medium leading-relaxed;
     animation: slideInUp 1s ease-out 0.2s both;
   }
   

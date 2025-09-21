@@ -36,9 +36,9 @@ const Features = () => {
 
   return (
     <section id="about" className="py-16 bg-background">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">{/* Responsive padding */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-foreground">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">{/* Responsive heading */}
             Почему выбирают СК Победа?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -46,7 +46,7 @@ const Features = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">{/* Better responsive grid */}
           {features.map((feature, index) => (
             <Card 
               key={index} 

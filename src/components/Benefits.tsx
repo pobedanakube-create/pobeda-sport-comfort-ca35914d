@@ -25,10 +25,10 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="py-16 px-6 bg-gradient-to-b from-background to-secondary/10">
-      <div className="container mx-auto max-w-6xl">
+    <section id="benefits" className="py-16 px-4 sm:px-6 bg-gradient-to-b from-background to-secondary/10">
+      <div className="container mx-auto max-w-6xl">{/* Responsive padding */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-fitness-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-fitness-primary mb-4">{/* Responsive heading */}
             Наши преимущества
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -36,7 +36,7 @@ const Benefits = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">{/* Better responsive grid */}
           {benefits.map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (

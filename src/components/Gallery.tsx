@@ -28,10 +28,10 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="py-16 px-6 bg-gradient-to-b from-background to-secondary/20">
-      <div className="container mx-auto max-w-6xl">
+    <section id="gallery" className="py-16 px-4 sm:px-6 bg-gradient-to-b from-background to-secondary/20">
+      <div className="container mx-auto max-w-6xl">{/* Responsive padding */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-fitness-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-fitness-primary mb-4">{/* Responsive heading */}
             Галерея
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -39,7 +39,7 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">{/* Better responsive grid */}
           {images.map((image, index) => (
             <div
               key={index}
@@ -49,6 +49,7 @@ const Gallery = () => {
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={image.src}
+                  loading="lazy"
                   alt={image.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />

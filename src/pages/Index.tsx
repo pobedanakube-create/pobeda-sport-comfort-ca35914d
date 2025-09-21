@@ -8,10 +8,14 @@ import Benefits from "@/components/Benefits";
 import BookingForm from "@/components/BookingForm";
 import Features from "@/components/Features";
 import ContactSection from "@/components/ContactSection";
+import PerformanceMonitor from "@/components/PerformanceMonitor";
+import SEOHead from "@/components/SEOHead";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead />
+      <PerformanceMonitor />
       <Header />
       <main>
         <HeroBanner />

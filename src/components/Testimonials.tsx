@@ -52,10 +52,10 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-16 px-6 bg-secondary/10">
+    <section id="testimonials" className="py-16 px-4 sm:px-6 bg-secondary/10">{/* Responsive padding */}
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-fitness-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-fitness-primary mb-4">{/* Responsive heading */}
             Отзывы клиентов
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -63,7 +63,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">{/* Better responsive grid */}
           {testimonials.map((testimonial, index) => (
             <Card
               key={testimonial.id}

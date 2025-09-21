@@ -21,10 +21,10 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-16 sm:py-20 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6">{/* Responsive padding */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-foreground">{/* Responsive heading */}
             Наши услуги
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -33,7 +33,7 @@ const ServicesSection = () => {
           <div className="w-24 h-1 bg-gradient-accent mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">{/* Better responsive grid */}
           {services.map((service, index) => {
             const IconComponent = service.icon;
             

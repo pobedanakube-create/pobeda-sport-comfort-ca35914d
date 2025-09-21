@@ -65,7 +65,7 @@ const BookingForm = () => {
     <section id="booking" className="py-16 px-6 bg-gradient-to-b from-secondary/5 to-background">
       <div className="container mx-auto max-w-2xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-fitness-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-fitness-primary mb-4">{/* Responsive heading */}
             Записаться на тренировку
           </h2>
           <p className="text-lg text-muted-foreground">

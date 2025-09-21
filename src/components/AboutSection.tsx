@@ -33,10 +33,10 @@ const AboutSection = () => {
     <section 
       ref={sectionRef}
       id="about-club" 
-      className="py-20 bg-background"
+      className="py-16 sm:py-20 bg-background"
     >
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6">{/* Container updated for better responsiveness */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">{/* Improved responsive spacing */}
           {/* Левая колонка - текст */}
           <div 
             className={`space-y-6 transition-all duration-1000 ${
@@ -46,7 +46,7 @@ const AboutSection = () => {
             }`}
           >
             <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">{/* Responsive text sizing */}
                 О клубе
                 <span className="block w-20 h-1 bg-gradient-accent mt-4 rounded-full"></span>
               </h2>
@@ -77,17 +77,17 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 pt-4">{/* Responsive grid for features */}
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <div className="w-3 h-3 bg-primary rounded-full flex-shrink-0"></div>
                 <span className="text-sm font-medium text-foreground">Уютная атмосфера</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-accent rounded-full"></div>
+                <div className="w-3 h-3 bg-accent rounded-full flex-shrink-0"></div>
                 <span className="text-sm font-medium text-foreground">Современное оборудование</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <div className="w-3 h-3 bg-primary rounded-full flex-shrink-0"></div>
                 <span className="text-sm font-medium text-foreground">Близость к дому</span>
               </div>
             </div>
@@ -107,7 +107,8 @@ const AboutSection = () => {
                 <img
                   src={gymInterior}
                   alt="Интерьер спортивного клуба СК Победа"
-                  className="w-full h-[500px] lg:h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-fitness-secondary/20 to-transparent"></div>
                 
