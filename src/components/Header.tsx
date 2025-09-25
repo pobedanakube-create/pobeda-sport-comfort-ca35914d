@@ -59,15 +59,25 @@ const Header = () => {
             </button>
           </nav>
           
-          {/* Desktop CTA Button */}
-          <Button 
-            variant="default" 
-            size="sm" 
-            className="hidden sm:flex bg-gradient-accent hover:bg-primary/90 text-fitness-secondary hover:scale-105 transition-all duration-300"
-            onClick={() => scrollToSection('booking')}
-          >
-            Записаться
-          </Button>
+          {/* Desktop CTA Buttons */}
+          <div className="hidden sm:flex items-center space-x-3">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="border-fitness-accent/30 text-fitness-primary hover:bg-fitness-accent/10 hover:border-fitness-accent transition-all duration-300"
+              onClick={() => scrollToSection('online-booking')}
+            >
+              Записаться онлайн
+            </Button>
+            <Button 
+              variant="default" 
+              size="sm" 
+              className="bg-gradient-accent hover:bg-primary/90 text-fitness-secondary hover:scale-105 transition-all duration-300"
+              onClick={() => scrollToSection('booking')}
+            >
+              Записаться
+            </Button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -107,12 +117,21 @@ const Header = () => {
               >
                 Контакты
               </button>
-              <Button 
-                className="w-full mt-4 bg-gradient-accent hover:bg-primary/90 text-fitness-secondary" 
-                onClick={() => scrollToSection('booking')}
-              >
-                Записаться на тренировку
-              </Button>
+              <div className="space-y-3 mt-4">
+                <Button 
+                  variant="outline"
+                  className="w-full border-fitness-accent/30 text-fitness-primary hover:bg-fitness-accent/10" 
+                  onClick={() => scrollToSection('online-booking')}
+                >
+                  Записаться онлайн
+                </Button>
+                <Button 
+                  className="w-full bg-gradient-accent hover:bg-primary/90 text-fitness-secondary" 
+                  onClick={() => scrollToSection('booking')}
+                >
+                  Записаться на тренировку
+                </Button>
+              </div>
             </nav>
           </div>
         )}

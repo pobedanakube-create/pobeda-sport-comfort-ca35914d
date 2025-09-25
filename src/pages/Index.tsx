@@ -6,6 +6,7 @@ import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Benefits from "@/components/Benefits";
 import BookingForm from "@/components/BookingForm";
+import YClientsBooking from "@/components/YClientsBooking";
 import Features from "@/components/Features";
 import ContactSection from "@/components/ContactSection";
 import PerformanceMonitor from "@/components/PerformanceMonitor";
@@ -24,6 +25,7 @@ const Index = () => {
         <Gallery />
         <Testimonials />
         <Benefits />
+        <YClientsBooking />
         <BookingForm />
         <Features />
         <ContactSection />
