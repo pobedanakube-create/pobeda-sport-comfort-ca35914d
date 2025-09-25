@@ -11,6 +11,7 @@ import Features from "@/components/Features";
 import ContactSection from "@/components/ContactSection";
 import PerformanceMonitor from "@/components/PerformanceMonitor";
 import SEOHead from "@/components/SEOHead";
+import { VERSION } from "@/lib/version";
 
 const Index = () => {
   return (
@@ -124,9 +125,14 @@ const Index = () => {
           {/* Разделительная линия */}
           <div className="border-t border-secondary-foreground/20 pt-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <p className="text-sm text-secondary-foreground/60 text-center md:text-left">
-                © 2025 СК Победа. Все права защищены.
-              </p>
+              <div className="text-center md:text-left">
+                <p className="text-sm text-secondary-foreground/60">
+                  © 2025 СК Победа. Все права защищены.
+                </p>
+                <p className="text-xs text-secondary-foreground/40 mt-1">
+                  Версия {VERSION}
+                </p>
+              </div>
               <div className="flex flex-wrap justify-center md:justify-end gap-4 text-xs">
                 <a 
                   href="/terms" 
