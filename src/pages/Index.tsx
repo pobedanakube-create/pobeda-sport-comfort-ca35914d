@@ -12,10 +12,8 @@ import ContactSection from "@/components/ContactSection";
 import PerformanceMonitor from "@/components/PerformanceMonitor";
 import SEOHead from "@/components/SEOHead";
 import { VERSION } from "@/lib/version";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <SEOHead />
       <PerformanceMonitor />
       <Header />
@@ -32,7 +30,9 @@ const Index = () => {
         <ContactSection />
       </main>
       
-      <footer className="bg-secondary text-secondary-foreground py-12 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+      <footer className="bg-secondary text-secondary-foreground py-12 animate-fade-in" style={{
+      animationDelay: '0.5s'
+    }}>
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {/* Логотип и описание */}
@@ -53,34 +53,22 @@ const Index = () => {
               <h4 className="font-semibold text-secondary-foreground mb-4">Полезные ссылки</h4>
               <ul className="space-y-2">
                 <li>
-                  <a 
-                    href="#about" 
-                    className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4"
-                  >
+                  <a href="#about" className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4">
                     О нас
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#services" 
-                    className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4"
-                  >
+                  <a href="#services" className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4">
                     Услуги
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#contact" 
-                    className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4"
-                  >
+                  <a href="#contact" className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4">
                     Контакты
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="/privacy" 
-                    className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4"
-                  >
+                  <a href="/privacy" className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4">
                     Политика конфиденциальности
                   </a>
                 </li>
@@ -91,28 +79,13 @@ const Index = () => {
             <div className="text-center md:text-right">
               <h4 className="font-semibold text-secondary-foreground mb-4">Мы в соцсетях</h4>
               <div className="flex justify-center md:justify-end space-x-4 mb-4">
-                <a 
-                  href="https://vk.com/pobeda_sport" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group"
-                >
+                <a href="https://vk.com/pobeda_sport" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group">
                   <span className="text-secondary-foreground group-hover:text-white text-sm font-bold">ВК</span>
                 </a>
-                <a 
-                  href="https://instagram.com/pobeda_sport" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group"
-                >
+                <a href="https://instagram.com/pobeda_sport" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group">
                   <span className="text-secondary-foreground group-hover:text-white text-sm font-bold">IG</span>
                 </a>
-                <a 
-                  href="https://t.me/pobeda_sport" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group"
-                >
+                <a href="https://t.me/pobeda_sport" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group">
                   <span className="text-secondary-foreground group-hover:text-white text-sm font-bold">TG</span>
                 </a>
               </div>
@@ -134,16 +107,10 @@ const Index = () => {
                 </p>
               </div>
               <div className="flex flex-wrap justify-center md:justify-end gap-4 text-xs">
-                <a 
-                  href="/terms" 
-                  className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4"
-                >
+                <a href="/terms" className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4">
                   Пользовательское соглашение
                 </a>
-                <a 
-                  href="/privacy" 
-                  className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4"
-                >
+                <a href="/privacy" className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4">
                   Политика конфиденциальности
                 </a>
               </div>
@@ -151,8 +118,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
