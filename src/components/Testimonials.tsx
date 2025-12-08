@@ -1,103 +1,97 @@
-import { Star } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import client1 from "@/assets/client-1.jpg";
-import client2 from "@/assets/client-2.jpg";
-import client3 from "@/assets/client-3.jpg";
-import client4 from "@/assets/client-4.jpg";
+import { ExternalLink, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Анна Петрова",
-      photo: client1,
-      rating: 5,
-      text: "Отличный клуб! Удобное расположение рядом с домом и профессиональные тренеры. За полгода занятий достигла всех своих целей."
-    },
-    {
-      id: 2,
-      name: "Дмитрий Коваленко",
-      photo: client2,
-      rating: 5,
-      text: "Современное оборудование и дружелюбная атмосфера. Тренеры всегда готовы помочь и составить индивидуальную программу."
-    },
-    {
-      id: 3,
-      name: "Елена Смирнова",
-      photo: client3,
-      rating: 4,
-      text: "Хожу в СК Победа уже два года. Очень нравится, что можно заниматься в любое удобное время. Цены доступные."
-    },
-    {
-      id: 4,
-      name: "Алексей Волков",
-      photo: client4,
-      rating: 5,
-      text: "Лучший спортклуб в районе! Чистота, порядок, новое оборудование. Персональные тренировки дают отличные результаты."
-    }
-  ];
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <Star
-        key={index}
-        size={16}
-        className={`${
-          index < rating
-            ? "fill-fitness-accent text-fitness-accent"
-            : "text-muted-foreground/30"
-        }`}
-      />
-    ));
-  };
+  const YANDEX_REVIEWS_URL = "https://yandex.ru/maps/org/pobeda/178117238176/reviews/";
 
   return (
-    <section id="testimonials" className="py-16 px-4 sm:px-6 bg-secondary/10">{/* Responsive padding */}
-      <div className="container mx-auto max-w-6xl">
+    <section id="testimonials" className="py-16 sm:py-20 px-4 sm:px-6 bg-muted/30">
+      <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-fitness-primary mb-4">{/* Responsive heading */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
             Отзывы клиентов
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Узнайте, что говорят наши клиенты о тренировках в СК Победа
           </p>
+          <div className="w-24 h-1 bg-gradient-accent mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">{/* Better responsive grid */}
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={testimonial.id}
-              className="group hover:scale-105 transition-all duration-300 hover:shadow-elegant bg-card border-border/50 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+        {/* Блок с рейтингом */}
+        <div className="flex items-center justify-center gap-3 mb-8">
+          <span className="text-3xl font-bold text-foreground">5.0</span>
+          <div className="flex gap-0.5">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} size={20} className="fill-accent text-accent" />
+            ))}
+          </div>
+          <span className="text-muted-foreground">на Яндекс Картах</span>
+        </div>
+
+        {/* Виджет Яндекс Карт с отзывами */}
+        <div className="flex justify-center mb-8">
+          <div 
+            style={{ 
+              width: '100%', 
+              maxWidth: '560px', 
+              height: '800px', 
+              overflow: 'hidden', 
+              position: 'relative' 
+            }}
+          >
+            <iframe 
+              style={{ 
+                width: '100%', 
+                height: '100%', 
+                border: '1px solid #e6e6e6', 
+                borderRadius: '8px', 
+                boxSizing: 'border-box' 
+              }}
+              src="https://yandex.ru/maps-reviews-widget/178117238176?comments"
+              title="Отзывы о СК Победа на Яндекс Картах"
+            />
+            <a 
+              href="https://yandex.ru/maps/org/pobeda/178117238176/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ 
+                boxSizing: 'border-box', 
+                textDecoration: 'none', 
+                color: '#b3b3b3', 
+                fontSize: '10px', 
+                fontFamily: 'YS Text, sans-serif', 
+                padding: '0 16px', 
+                position: 'absolute', 
+                bottom: '8px', 
+                width: '100%', 
+                textAlign: 'center', 
+                left: 0, 
+                overflow: 'hidden', 
+                textOverflow: 'ellipsis', 
+                display: 'block', 
+                maxHeight: '14px', 
+                whiteSpace: 'nowrap' 
+              }}
             >
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-fitness-accent/20">
-                      <img
-                        src={testimonial.photo}
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="mb-2">
-                      <h3 className="font-semibold text-foreground text-lg">
-                        {testimonial.name}
-                      </h3>
-                      <div className="flex items-center space-x-1 mt-1">
-                        {renderStars(testimonial.rating)}
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      "{testimonial.text}"
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+              Победа на карте Калуги — Яндекс Карты
+            </a>
+          </div>
+        </div>
+
+        {/* Кнопка для перехода на все отзывы */}
+        <div className="text-center">
+          <Button 
+            variant="outline"
+            size="lg"
+            className="border-primary text-primary hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 font-bold"
+            onClick={() => window.open(YANDEX_REVIEWS_URL, '_blank')}
+          >
+            <ExternalLink className="w-4 h-4 mr-2" />
+            Смотреть все отзывы на Яндекс Картах
+          </Button>
+          <p className="text-sm text-muted-foreground mt-4">
+            Оставьте свой отзыв — нам важно ваше мнение! 💪
+          </p>
         </div>
       </div>
     </section>

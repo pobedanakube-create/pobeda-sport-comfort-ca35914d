@@ -6,11 +6,12 @@ import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Benefits from "@/components/Benefits";
 import BookingForm from "@/components/BookingForm";
-import YClientsBooking from "@/components/YClientsBooking";
+// import YClientsBooking from "@/components/YClientsBooking"; // временно отключено
 import Features from "@/components/Features";
 import ContactSection from "@/components/ContactSection";
 import PerformanceMonitor from "@/components/PerformanceMonitor";
 import SEOHead from "@/components/SEOHead";
+import CookieConsent from "@/components/CookieConsent";
 import { VERSION } from "@/lib/version";
 const Index = () => {
   return <div className="min-h-screen bg-background">
@@ -24,7 +25,7 @@ const Index = () => {
         <Gallery />
         <Testimonials />
         <Benefits />
-        <YClientsBooking />
+        {/* <YClientsBooking /> временно отключено */}
         <BookingForm />
         <Features />
         <ContactSection />
@@ -38,9 +39,11 @@ const Index = () => {
             {/* Логотип и описание */}
             <div className="text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-accent rounded-full flex items-center justify-center">
-                  <span className="text-fitness-secondary font-bold text-sm">П</span>
-                </div>
+                <img 
+                  src="/LOGO.png" 
+                  alt="СК Победа" 
+                  className="h-10 w-auto object-contain"
+                />
                 <span className="text-xl font-bold text-secondary-foreground">СК Победа</span>
               </div>
               <p className="text-secondary-foreground/70 text-sm leading-relaxed">
@@ -82,9 +85,6 @@ const Index = () => {
                 <a href="https://vk.com/pobeda_sport" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group">
                   <span className="text-secondary-foreground group-hover:text-white text-sm font-bold">ВК</span>
                 </a>
-                <a href="https://instagram.com/pobeda_sport" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group">
-                  <span className="text-secondary-foreground group-hover:text-white text-sm font-bold">IG</span>
-                </a>
                 <a href="https://t.me/pobeda_sport" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-fitness-primary hover:scale-110 transition-all duration-300 group">
                   <span className="text-secondary-foreground group-hover:text-white text-sm font-bold">TG</span>
                 </a>
@@ -118,6 +118,9 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Баннер согласия на обработку персональных данных */}
+      <CookieConsent />
     </div>;
 };
 export default Index;

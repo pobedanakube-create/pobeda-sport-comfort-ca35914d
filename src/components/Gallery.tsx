@@ -11,12 +11,12 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    { src: gallery1, alt: "Кардио зона" },
-    { src: gallery2, alt: "Силовая зона" },
-    { src: gallery3, alt: "Групповые занятия" },
-    { src: gallery4, alt: "Персональные тренировки" },
-    { src: gallery5, alt: "Раздевалка" },
-    { src: gallery6, alt: "Ресепшн" },
+    { src: gallery1, alt: "Команда СК Победа" },
+    { src: gallery2, alt: "Соревнования" },
+    { src: gallery3, alt: "Наши чемпионы" },
+    { src: gallery4, alt: "Тренировки" },
+    { src: gallery5, alt: "Воздушная гимнастика" },
+    { src: gallery6, alt: "Растяжка и гибкость" },
   ];
 
   const openModal = (imageSrc: string) => {
@@ -35,7 +35,7 @@ const Gallery = () => {
             Галерея
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Посмотрите на наши современные залы и оборудование
+            Наши спортсмены, тренировки и соревнования
           </p>
         </div>
 

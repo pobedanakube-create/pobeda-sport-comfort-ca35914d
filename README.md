@@ -1,73 +1,98 @@
-# Welcome to your Lovable project
+# СК Победа — Спортивный клуб
 
-## Project info
+<div align="center">
 
-**URL**: https://lovable.dev/projects/da2c6152-1e8a-457d-8998-49fa5ef710f8
+![Версия](https://img.shields.io/badge/версия-1.1.0-blue)
+![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite)
+![Tailwind](https://img.shields.io/badge/Tailwind-3.4-06B6D4?logo=tailwindcss)
 
-## How can I edit this code?
+**Современный сайт спортивного клуба с онлайн-записью**
 
-There are several ways of editing your application.
+[Демо](#) • [Документация](./docs/README.md) • [Changelog](./docs/CHANGELOG.md)
 
-**Use Lovable**
+</div>
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/da2c6152-1e8a-457d-8998-49fa5ef710f8) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## О проекте
 
-**Use your preferred IDE**
+Официальный сайт спортивного клуба «СК Победа» в г. Калуга. Включает информацию о клубе, услугах, галерею, отзывы клиентов и систему онлайн-записи через YCLIENTS.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Контакты клуба
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Адрес:** г. Калуга, ул. Кибальчича, д.32
+- **Телефон:** +7 910 529 82 82
+- **Email:** pobedanakube@gmail.com
+- **Режим работы:** Пн-Вс 06:00 — 23:00
 
-Follow these steps:
+## Быстрый старт
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# Клонирование
+git clone https://github.com/pobedanakube-create/pobeda-sport-comfort-ca35914d.git
+cd pobeda-sport-comfort-ca35914d
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Установка зависимостей
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Запуск dev-сервера (http://localhost:8080)
 npm run dev
+
+# Сборка для production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## Технологии
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+| Технология | Версия | Назначение |
+|------------|--------|------------|
+| React | 18.3 | UI Framework |
+| Vite | 5.4 | Build Tool |
+| TypeScript | 5.8 | Типизация |
+| Tailwind CSS | 3.4 | Стилизация |
+| shadcn/ui | — | UI компоненты |
+| Mapbox GL | 3.15 | Интерактивная карта |
+| YCLIENTS | — | Онлайн-запись |
 
-**Use GitHub Codespaces**
+## Структура проекта
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+├── docs/               # Документация проекта
+│   ├── README.md       # Общее описание
+│   ├── ARCHITECTURE.md # Архитектура
+│   ├── CHANGELOG.md    # История изменений
+│   └── SETUP.md        # Инструкция по развёртыванию
+├── public/             # Статические файлы
+├── src/
+│   ├── assets/         # Изображения
+│   ├── components/     # React компоненты
+│   │   └── ui/         # shadcn/ui компоненты
+│   ├── hooks/          # Кастомные хуки
+│   ├── lib/            # Утилиты
+│   └── pages/          # Страницы
+└── package.json
+```
 
-## What technologies are used for this project?
+## Документация
 
-This project is built with:
+Подробная документация находится в папке [docs/](./docs/):
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- [📖 Описание проекта](./docs/README.md)
+- [🏗 Архитектура](./docs/ARCHITECTURE.md)
+- [🚀 Развёртывание](./docs/SETUP.md)
+- [📝 Журнал изменений](./docs/CHANGELOG.md)
 
-## How can I deploy this project?
+## Скрипты
 
-Simply open [Lovable](https://lovable.dev/projects/da2c6152-1e8a-457d-8998-49fa5ef710f8) and click on Share -> Publish.
+| Команда | Описание |
+|---------|----------|
+| `npm run dev` | Запуск dev-сервера |
+| `npm run build` | Production сборка |
+| `npm run preview` | Просмотр сборки |
+| `npm run lint` | Проверка ESLint |
 
-## Can I connect a custom domain to my Lovable project?
+## Лицензия
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© 2025 СК Победа. Все права защищены.

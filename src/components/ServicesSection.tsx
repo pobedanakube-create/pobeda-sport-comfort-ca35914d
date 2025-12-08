@@ -77,8 +77,10 @@ const ServicesSection = () => {
         {/* Дополнительная информация */}
         <div className="text-center mt-16">
           <div className="bg-card rounded-2xl p-8 border border-border max-w-4xl mx-auto">
+            <p className="text-xl font-bold text-primary mb-2">
+              Первое посещение — бесплатно!
+            </p>
             <p className="text-lg text-muted-foreground mb-4">
-              <span className="text-primary font-semibold">Первое посещение — бесплатно!</span> 
               Приходите на ознакомительную тренировку и почувствуйте атмосферу нашего клуба.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">

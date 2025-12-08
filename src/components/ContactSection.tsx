@@ -1,41 +1,10 @@
-import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import { MapPin, Phone, Clock, Mail, ExternalLink } from "lucide-react";
 
 const ContactSection = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState('');
-
-  useEffect(() => {
-    if (!mapContainer.current || !mapboxToken) return;
-
-    mapboxgl.accessToken = mapboxToken;
-    
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/light-v11',
-      center: [36.2572, 54.5293], // Калуга координаты
-      zoom: 14,
-    });
-
-    // Добавить маркер спортивного клуба
-    new mapboxgl.Marker({ color: '#f97316' })
-      .setLngLat([36.2572, 54.5293])
-      .setPopup(new mapboxgl.Popup().setHTML('<div><strong>СК Победа</strong><br>Ул. Кибальчича, д.32</div>'))
-      .addTo(map.current);
-
-    // Добавить навигационные элементы
-    map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
-
-    return () => {
-      map.current?.remove();
-    };
-  }, [mapboxToken]);
-
+  const YANDEX_MAP_URL = "https://yandex.ru/maps/org/pobeda/178117238176/?indoorLevel=1&ll=36.244812%2C54.584589&z=16.71";
+  
   return (
     <section id="contact" className="py-16 bg-gradient-to-b from-secondary/5 to-background animate-fade-in">
       <div className="container mx-auto px-6">
@@ -49,31 +18,35 @@ const ContactSection = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Карта */}
+          {/* Яндекс Карта */}
           <div className="order-2 lg:order-1 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <Card className="h-[400px] lg:h-[500px] overflow-hidden border-border bg-card shadow-lg">
               <CardContent className="p-0 h-full">
-                {!mapboxToken ? (
-                  <div className="h-full flex flex-col items-center justify-center p-6 bg-muted/20">
-                    <MapPin className="w-12 h-12 text-fitness-primary mb-4" />
-                    <p className="text-center text-muted-foreground mb-4">
-                      Для отображения интерактивной карты введите ваш Mapbox токен
-                    </p>
-                    <input
-                      type="text"
-                      placeholder="Введите Mapbox Public Token"
-                      className="w-full max-w-md px-4 py-2 border rounded-md mb-4"
-                      onChange={(e) => setMapboxToken(e.target.value)}
-                    />
-                    <p className="text-xs text-muted-foreground text-center">
-                      Получите токен на <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-fitness-primary hover:underline">mapbox.com</a>
-                    </p>
-                  </div>
-                ) : (
-                  <div ref={mapContainer} className="w-full h-full" />
-                )}
+                <iframe 
+                  src="https://yandex.ru/map-widget/v1/?ll=36.244812%2C54.584589&z=16&pt=36.244812%2C54.584589%2Cpm2rdm&l=map"
+                  width="100%" 
+                  height="100%" 
+                  frameBorder="0"
+                  allowFullScreen
+                  title="СК Победа на Яндекс Картах"
+                  className="w-full h-full"
+                  style={{ border: 'none' }}
+                />
               </CardContent>
             </Card>
+            
+            {/* Ссылка на Яндекс Карты */}
+            <div className="mt-4">
+              <Button 
+                variant="outline"
+                className="w-full border-red-500 text-red-600 hover:bg-red-500 hover:text-white hover:scale-105 transition-all duration-300"
+                size="lg"
+                onClick={() => window.open(YANDEX_MAP_URL, '_blank')}
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Открыть на Яндекс Картах
+              </Button>
+            </div>
           </div>
 
           {/* Контактная информация */}
@@ -146,21 +119,8 @@ const ContactSection = () => {
                       Позвонить сейчас
                     </Button>
                     
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300" 
-                      size="lg"
-                      onClick={() => window.open('https://wa.me/79105298282', '_blank')}
-                    >
-                      Написать в WhatsApp
-                    </Button>
                   </div>
                   
-                  <div className="text-center mt-4">
-                    <p className="text-sm text-muted-foreground">
-                      Первая консультация — бесплатно!
-                    </p>
-                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -170,4 +130,5 @@ const ContactSection = () => {
     </section>
   );
 };
+
 export default ContactSection;

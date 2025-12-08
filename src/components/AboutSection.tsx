@@ -106,7 +106,7 @@ const AboutSection = () => {
               <div className="relative bg-card rounded-2xl overflow-hidden shadow-card">
                 <img
                   src={gymInterior}
-                  alt="Интерьер спортивного клуба СК Победа"
+                  alt="Соревнования СК Победа"
                   loading="lazy"
                   className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
@@ -116,10 +116,10 @@ const AboutSection = () => {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-background/95 backdrop-blur-sm rounded-lg p-4">
                     <p className="text-sm font-medium text-foreground">
-                      Многофункциональный зал с современным оборудованием
+                      Наши воспитанники — чемпионы!
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">
-                      Все для комфортных тренировок в одном месте
+                      Победы на соревнованиях всех уровней
                     </p>
                   </div>
                 </div>

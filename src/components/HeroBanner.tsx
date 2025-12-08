@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import heroImage from "@/assets/hero-gym.jpg";
+import heroImage from "@/assets/hero-team.jpg";
 
 const HeroBanner = () => {
   const scrollToBooking = () => {
@@ -38,13 +38,13 @@ const HeroBanner = () => {
             size="lg"
             onClick={scrollToBooking}
           >
-            Записаться на тренировку
+            🎁 Получи скидку на первую тренировку
           </Button>
           
           <Button 
             variant="outline" 
             size="lg"
-            className="w-full sm:w-auto border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300"
+            className="w-full sm:w-auto bg-white/90 border-white text-gray-800 hover:bg-white hover:text-primary transition-all duration-300"
             onClick={() => window.open('tel:+79105298282')}
           >
             <Phone className="w-4 h-4 mr-2" />
