@@ -51,7 +51,7 @@ const Header = () => {
               {/* Контент */}
               <span className="relative z-10 flex items-center gap-2 text-white/80 group-hover:text-white font-medium">
                 <Info size={16} className="text-primary/70 group-hover:text-accent transition-colors duration-300" />
-                О клубе
+              О клубе
               </span>
             </button>
             
@@ -63,7 +63,7 @@ const Header = () => {
               <span className="absolute inset-0 rounded-xl border border-white/10 group-hover:border-primary/50 group-hover:shadow-[0_0_15px_rgba(185,28,28,0.3)] transition-all duration-300"></span>
               <span className="relative z-10 flex items-center gap-2 text-white/80 group-hover:text-white font-medium">
                 <Dumbbell size={16} className="text-primary/70 group-hover:text-accent transition-colors duration-300" />
-                Услуги
+              Услуги
               </span>
             </button>
             
@@ -75,7 +75,7 @@ const Header = () => {
               <span className="absolute inset-0 rounded-xl border border-white/10 group-hover:border-primary/50 group-hover:shadow-[0_0_15px_rgba(185,28,28,0.3)] transition-all duration-300"></span>
               <span className="relative z-10 flex items-center gap-2 text-white/80 group-hover:text-white font-medium">
                 <Images size={16} className="text-primary/70 group-hover:text-accent transition-colors duration-300" />
-                Галерея
+              Галерея
               </span>
             </button>
             
@@ -87,7 +87,7 @@ const Header = () => {
               <span className="absolute inset-0 rounded-xl border border-white/10 group-hover:border-primary/50 group-hover:shadow-[0_0_15px_rgba(185,28,28,0.3)] transition-all duration-300"></span>
               <span className="relative z-10 flex items-center gap-2 text-white/80 group-hover:text-white font-medium">
                 <Phone size={16} className="text-primary/70 group-hover:text-accent transition-colors duration-300" />
-                Контакты
+              Контакты
               </span>
             </button>
           </nav>

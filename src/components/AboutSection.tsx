@@ -108,6 +108,9 @@ const AboutSection = () => {
                   src={gymInterior}
                   alt="Соревнования СК Победа"
                   loading="lazy"
+                  decoding="async"
+                  width={600}
+                  height={600}
                   className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-fitness-secondary/20 to-transparent"></div>

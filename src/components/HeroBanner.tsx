@@ -16,13 +16,20 @@ const HeroBanner = () => {
   };
 
   return (
-    <section 
-      className="hero-banner min-h-screen relative flex items-center justify-center"
-      style={{
-        backgroundImage: `linear-gradient(135deg, hsl(var(--fitness-overlay)), hsl(var(--fitness-overlay))), url(${heroImage})`
-      }}
-    >
-      <div className="hero-content max-w-5xl mx-auto px-4 sm:px-6 text-center">
+    <section className="hero-banner min-h-screen relative flex items-center justify-center overflow-hidden">
+      {/* Hero Background Image - optimized for LCP */}
+      <img
+        src={heroImage}
+        alt="СК Победа - спортивный клуб"
+        fetchPriority="high"
+        decoding="async"
+        width={1920}
+        height={1080}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-fitness-secondary/85 to-fitness-secondary/70"></div>
+      <div className="hero-content relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           СК Победа — ваш спортивный клуб рядом с домом
         </h1>

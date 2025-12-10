@@ -50,7 +50,10 @@ const Gallery = () => {
                 <img
                   src={image.src}
                   loading="lazy"
+                  decoding="async"
                   alt={image.alt}
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
