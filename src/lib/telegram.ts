@@ -1,6 +1,11 @@
 // Telegram Bot Integration для отправки заявок
 const TELEGRAM_BOT_TOKEN = "8272637888:AAEzggbG8AO-olunSXcc3NgJxiEk_T5J47o";
-const TELEGRAM_CHAT_ID = "337528971"; // Полина Кондратьева
+
+// Chat ID получателей (можно добавить несколько)
+const TELEGRAM_CHAT_IDS = [
+  "241367335",   // Разработчик (тест)
+  // "337528971", // Полина Кондратьева (временно отключена)
+];
 
 interface BookingData {
   name: string;
@@ -10,7 +15,7 @@ interface BookingData {
 }
 
 export const sendToTelegram = async (data: BookingData): Promise<boolean> => {
-  if (!TELEGRAM_CHAT_ID) {
+  if (TELEGRAM_CHAT_IDS.length === 0) {
     console.error("Telegram Chat ID не настроен");
     return false;
   }
@@ -27,32 +32,33 @@ export const sendToTelegram = async (data: BookingData): Promise<boolean> => {
   `.trim();
 
   try {
-    const response = await fetch(
-      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          text: message,
-          parse_mode: "HTML",
-        }),
-      }
+    // Отправляем во все чаты из списка
+    const results = await Promise.all(
+      TELEGRAM_CHAT_IDS.map(chatId =>
+        fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: "HTML",
+          }),
+        }).then(res => res.json())
+      )
     );
 
-    const result = await response.json();
+    // Проверяем что хотя бы одно сообщение отправлено
+    const success = results.some(result => result.ok);
     
-    if (!result.ok) {
-      console.error("Telegram API error:", result);
-      return false;
+    if (!success) {
+      console.error("Telegram API errors:", results);
     }
 
-    return true;
+    return success;
   } catch (error) {
     console.error("Ошибка отправки в Telegram:", error);
     return false;
   }
 };
-
