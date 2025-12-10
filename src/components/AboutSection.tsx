@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import gymInterior from "@/assets/gym-interior.jpg";
+import gymInterior from "@/assets/gym-interior.webp";
 
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);

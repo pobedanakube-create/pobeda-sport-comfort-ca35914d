@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import heroImage from "@/assets/hero-team.jpg";
+import heroImage from "@/assets/hero-team.webp";
 
 const HeroBanner = () => {
   const scrollToBooking = () => {
