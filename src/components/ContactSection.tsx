@@ -28,6 +28,7 @@ const ContactSection = () => {
                   height="100%" 
                   frameBorder="0"
                   allowFullScreen
+                  loading="lazy"
                   title="СК Победа на Яндекс Картах"
                   className="w-full h-full"
                   style={{ border: 'none' }}
