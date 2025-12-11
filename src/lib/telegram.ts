@@ -62,3 +62,4 @@ export const sendToTelegram = async (data: BookingData): Promise<boolean> => {
     return false;
   }
 };
+

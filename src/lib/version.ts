@@ -1,6 +1,25 @@
-export const VERSION = "1.2.1";
+export const VERSION = "1.3.1";
 
 export const VERSION_HISTORY = [
+  {
+    version: "1.3.1",
+    date: "2025-12-11",
+    changes: [
+      "Добавлена страница пользовательского соглашения (/terms)",
+      "Добавлен favicon с логотипом клуба"
+    ]
+  },
+  {
+    version: "1.3.0",
+    date: "2025-12-10",
+    changes: [
+      "Telegram бот для заявок с сайта",
+      "WebP изображения для оптимизации",
+      "Реальные отзывы с Яндекс Карт (статические)",
+      "Удалён Mapbox, lazy loading карты",
+      "Асинхронная загрузка шрифтов"
+    ]
+  },
   {
     version: "1.2.1",
     date: "2025-12-08",

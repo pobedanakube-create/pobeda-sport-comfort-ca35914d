@@ -71,7 +71,7 @@ const Index = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/privacy" className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4">
+                  <a href="/Политика конфиденциальности.pdf" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/70 hover:text-fitness-primary transition-colors duration-300 text-sm hover:underline underline-offset-4">
                     Политика конфиденциальности
                   </a>
                 </li>
@@ -107,10 +107,10 @@ const Index = () => {
                 </p>
               </div>
               <div className="flex flex-wrap justify-center md:justify-end gap-4 text-xs">
-                <a href="/terms" className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4">
+                <a href="/Пользовательское соглашение.pdf" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4">
                   Пользовательское соглашение
                 </a>
-                <a href="/privacy" className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4">
+                <a href="/Политика конфиденциальности.pdf" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/60 hover:text-fitness-primary transition-colors duration-300 hover:underline underline-offset-4">
                   Политика конфиденциальности
                 </a>
               </div>

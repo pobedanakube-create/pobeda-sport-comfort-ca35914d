@@ -62,7 +62,9 @@ const CookieConsent = () => {
               <p className="text-white/80 text-sm leading-relaxed">
                 Мы используем файлы cookie и обрабатываем персональные данные в соответствии с{" "}
                 <a 
-                  href="/privacy" 
+                  href="/Политика конфиденциальности.pdf" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-accent hover:text-primary underline underline-offset-2 transition-colors"
                 >
                   Политикой конфиденциальности
@@ -94,4 +96,5 @@ const CookieConsent = () => {
 };
 
 export default CookieConsent;
+
 
